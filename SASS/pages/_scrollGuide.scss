@@ -1,0 +1,22 @@
+.scrollGuide {
+  top: 88%;
+  left: 78%;
+  z-index: 1;
+
+  animation: scrollGuide 2s infinite backwards;
+
+  @media only screen and (max-width: 77em) {
+    display: none;
+  }
+
+  & p {
+    color: rgb(247, 93, 93);
+    font-size: 1.2vw;
+    font-family: roboto;
+    font-weight: 700;
+  }
+
+  & img {
+    width: 3vw;
+  }
+}

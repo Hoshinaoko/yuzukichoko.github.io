@@ -1,0 +1,45 @@
+// .container-3-imgs-coin-1-animation {
+//   animation: container-3-imgs-coin-1 2s 1 backwards;
+// }
+// .container-3-imgs-coin-2-animation {
+//   animation: container-3-imgs-coin-2 2s 1 backwards;
+// }
+// .container-3-imgs-coin-3-animation {
+//   animation: container-3-imgs-coin-3 2s 1 backwards;
+// }
+// .container-3-imgs-coin-4-animation {
+//   animation: container-3-imgs-coin-4 2s 1 backwards;
+// }
+
+// .container-3-imgs-animation {
+//   animation: container-3-imgs 2s 1 backwards;
+// }
+.iconLSvgTwo-animation {
+  animation: autoRotate 8s infinite cubic-bezier(0, 0, 1, 1);
+}
+
+.container-5-theater-main-arr-left-animation {
+  & svg {
+    animation: container-5-theater-main-arr-left 0.6s backwards 1;
+  }
+}
+.container-5-theater-main-arr-right-animation {
+  & svg {
+    animation: container-5-theater-main-arr-right 0.6s backwards 1;
+  }
+}
+
+.guide-number-forwards-animation {
+  animation: guide-number-forwards 1.2s backwards 1;
+}
+
+.breatheLight-colorEgg-5 {
+  animation: breatheLight ease 2.4s infinite backwards;
+}
+
+.colorEgg-4-main-imgBox-anima-play {
+  animation: colorEgg-4-imgChange-play 2s 1 forwards;
+}
+.colorEgg-4-main-imgBox-anima-pause {
+  animation: colorEgg-4-imgChange-pause 2s 1 forwards;
+}

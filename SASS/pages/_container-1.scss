@@ -1,0 +1,602 @@
+// .fanguang-front-1 {
+//   background-image: url(/UPLOAD/IMG/未标题-1.png);
+//   width: 50vh;
+//   height: 50vh;
+//   background-size: cover;
+//   z-index: 99;
+//   &:hover .fanguang-back-1 {
+//     clip-path: inset(0 0 0 0);
+//   }
+// }
+// .fanguang-back-1 {
+//   top: 0;
+//   left: 0;
+//   background-image: url(/UPLOAD/IMG/未标题-2.png);
+//   background-size: cover;
+//   width: 100%;
+//   height: 100%;
+//   clip-path: inset(50% 50% 50% 50%);
+// }
+.container {
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  transition: clip-path 1s;
+}
+
+.container-1 {
+  background-image: url(IMG/backgroung/note_texture.png);
+
+  @media only screen and (max-width: 60em) {
+    overflow: scroll;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &-audioButtons {
+    top: 50%;
+    left: 4%;
+    transform: translate(-50%, -50%);
+    width: 3vw;
+    height: 30vh;
+    gap: 1.4vw;
+
+    @media only screen and (max-width: 60em) {
+      display: none;
+    }
+  }
+  &-audioButton {
+    width: 100%;
+    height: 3vw;
+
+    border: 2px solid pink;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &-1 {
+    }
+    &-2 {
+    }
+    &-3 {
+    }
+    &:hover {
+      background-color: pink;
+      transform: scale(1.1);
+      border: 0px solid transparent;
+      box-shadow: 0 0 0.5rem 0.4rem rgba(255, 192, 203, 0.829);
+    }
+    &:hover &-text {
+      opacity: 1;
+      left: 240%;
+    }
+
+    &-text {
+      opacity: 0;
+      top: 70%;
+      left: 140%;
+      transform: translate(-50%, -50%);
+      width: 240%;
+      & p {
+        color: pink;
+        font-size: 1.2vw;
+        font-weight: 600;
+      }
+    }
+
+    &-img {
+      width: 100%;
+      height: 100%;
+
+      &-text {
+        top: 70%;
+        left: 240%;
+        transform: translate(-50%, -50%);
+        width: 240%;
+        & p {
+          color: pink;
+          font-size: 1.2vw;
+          font-weight: 600;
+        }
+      }
+      & img {
+        width: 90%;
+      }
+    }
+  }
+
+  &-mediaArr {
+    top: 46vw;
+    z-index: 2;
+    display: none;
+
+    @media only screen and (max-width: 60em) {
+      display: inline-block;
+    }
+
+    &-left {
+      left: 2%;
+
+      & img {
+        width: 7.2vw;
+        animation: container-1-mediaArr 1.6s ease-out 1 forwards;
+      }
+    }
+    &-right {
+      left: 98%;
+
+      & img {
+        width: 7.2vw;
+        animation: container-1-mediaArr 1.6s ease-out 1 forwards;
+      }
+    }
+  }
+}
+
+.musicLists {
+  gap: 9vw;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: fixed;
+  @media only screen and (max-width: 60em) {
+    gap: 5rem;
+    top: 88%;
+  }
+  @media only screen and (max-width: 50em) {
+    gap: 3rem;
+    top: 92%;
+  }
+  @media only screen and (max-width: 34em) {
+    gap: 4vw;
+  }
+  @media only screen and (max-width: 20em) {
+    top: 94%;
+  }
+}
+.musicListButton {
+  width: 10vw;
+  height: 3.5vw;
+  overflow: hidden;
+  // border: 2px solid var(--color-yellow-dark-1);
+  @media only screen and (max-width: 60em) {
+    width: 20vw;
+    height: 12vw;
+  }
+
+  @media only screen and (max-width: 34em) {
+    width: 20vw;
+    height: 12vw;
+  }
+
+  & img {
+    width: 100%;
+    // height: 100%;
+    top: -60%;
+    left: 0;
+    transition: all 0.8s cubic-bezier(0.89, 0, 0.4, 1);
+  }
+  & p {
+    width: 100%;
+    height: 100%;
+    font-size: 0.8vw;
+    font-family: Roboto;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.45vh;
+    @media only screen and (max-width: 60em) {
+      font-size: 1.6vw;
+      letter-spacing: 0.2vh;
+    }
+    @media only screen and (max-width: 34em) {
+      font-size: 1.2vw;
+    }
+    &:hover {
+      backdrop-filter: blur(2.5px);
+    }
+  }
+  &Filter {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all 0.8s ease-out;
+    &-1 {
+      background-color: rgba(199, 41, 41, 0.5);
+    }
+    &-2 {
+      background-color: rgba(29, 90, 131, 0.5);
+    }
+    &-3 {
+      background-color: rgba(23, 120, 110, 0.5);
+    }
+    &-4 {
+      background-color: rgba(40, 105, 149, 0.5);
+    }
+  }
+}
+.musicListButton:hover img {
+  transform: scale(1.2);
+}
+.musicListButton:active img {
+  transform: scale(1.3);
+}
+
+.showLists {
+  width: 65vw;
+  height: 33vw;
+  top: 55%;
+
+  @media only screen and (max-width: 60em) {
+    width: 90vw;
+    height: 200vw;
+    top: 120rem;
+  }
+
+  @media only screen and (max-width: 53em) {
+    top: 106rem;
+  }
+
+  @media only screen and (max-width: 46em) {
+    top: 90rem;
+  }
+
+  @media only screen and (max-width: 40em) {
+    top: 82rem;
+  }
+
+  @media only screen and (max-width: 36em) {
+    top: 74rem;
+  }
+
+  @media only screen and (max-width: 30em) {
+    top: 66rem;
+  }
+  @media only screen and (max-width: 26em) {
+    top: 60rem;
+  }
+  @media only screen and (max-width: 22em) {
+    top: 52rem;
+  }
+  @media only screen and (max-width: 20em) {
+    top: 42rem;
+  }
+}
+.showList {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  gap: 12vh;
+  z-index: 1;
+
+  @media only screen and (max-width: 60em) {
+    flex-direction: column;
+    gap: 8vw;
+  }
+  &Imgbox {
+    width: 19vw;
+    height: 28.5vw;
+    background-size: cover;
+    background-position: 50% 50%;
+
+    @media only screen and (max-width: 60em) {
+      width: 70vw;
+      height: 105vw;
+    }
+
+    & img {
+      height: 100%;
+      animation: showListImgbox 1s ease-in-out 1 backwards;
+    }
+    &::after {
+      transform: rotate(4deg);
+      z-index: 2;
+      animation: showListImgboxAfter 1.4s ease-in-out 1 backwards;
+      @media only screen and (max-width: 40em) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(4deg);
+      }
+    }
+    &-1 {
+      &::after {
+        background-color: rgb(171, 76, 76);
+        @media only screen and (max-width: 30em) {
+          width: 90%;
+        }
+      }
+    }
+    &-2 {
+      &::after {
+        background-color: rgb(56, 110, 145);
+        @media only screen and (max-width: 30em) {
+          width: 90%;
+        }
+      }
+    }
+    &-3 {
+      &::after {
+        background-color: rgb(111, 158, 153);
+        @media only screen and (max-width: 40em) {
+          width: 90%;
+        }
+        @media only screen and (max-width: 30em) {
+          width: 80%;
+        }
+      }
+    }
+    &-4 {
+      &::after {
+        background-color: rgb(96, 146, 180);
+        @media only screen and (max-width: 40em) {
+          width: 90%;
+        }
+        @media only screen and (max-width: 30em) {
+          width: 80%;
+        }
+      }
+    }
+  }
+  &Textbox {
+    width: 30vw;
+    height: 2px;
+    gap: 2.5vw;
+    animation: showListTextbox 1s ease-in-out 1.2s 1 backwards;
+
+    @media only screen and (max-width: 60em) {
+      width: 88vw;
+      height: auto;
+      gap: 8vw;
+    }
+
+    @media only screen and (max-width: 50em) {
+      padding-bottom: 8vw;
+    }
+    @media only screen and (max-width: 36em) {
+      padding-bottom: 12vw;
+    }
+    @media only screen and (max-width: 27em) {
+      padding-bottom: 20vw;
+    }
+    @media only screen and (max-width: 20em) {
+      padding-bottom: 0vw;
+      margin-bottom: -12vw;
+    }
+
+    &-T {
+      color: var(--color-grey-1);
+      font-size: 0.7vw;
+      margin-bottom: 0.8vh;
+      font-weight: 500;
+      // font-family: Roboto;
+
+      @media only screen and (max-width: 60em) {
+        font-size: 2.4vh;
+        font-weight: 500;
+        margin-bottom: 1.2vh;
+      }
+      @media only screen and (max-width: 60em) {
+        font-size: 1.6vh;
+      }
+      @media only screen and (max-width: 36em) {
+        font-size: 1.2vh;
+        margin-bottom: 0.8vh;
+      }
+      @media only screen and (max-width: 20em) {
+        font-size: 1vh;
+      }
+    }
+    &-S {
+      color: black;
+      font-size: 0.9vw;
+      font-weight: 700;
+      // font-family: Roboto;
+      @media only screen and (max-width: 60em) {
+        font-size: 3.6vh;
+      }
+      @media only screen and (max-width: 60em) {
+        font-size: 2.4vh;
+      }
+      @media only screen and (max-width: 36em) {
+        font-size: 1.8vh;
+      }
+      @media only screen and (max-width: 20em) {
+        font-size: 1.4vh;
+      }
+    }
+    & .intro {
+      font-weight: 500;
+      font-size: 0.6vw;
+      font-family: Roboto;
+      @media only screen and (max-width: 60em) {
+        font-size: 2.4vh;
+        margin-top: -4vw;
+      }
+      @media only screen and (max-width: 60em) {
+        font-size: 1.6vh;
+      }
+      @media only screen and (max-width: 36em) {
+        font-size: 1.2vh;
+      }
+      @media only screen and (max-width: 20em) {
+        font-size: 1vh;
+      }
+    }
+    & .header {
+      @media only screen and (max-width: 60em) {
+        margin-bottom: -2vw;
+      }
+    }
+
+    &-header-img {
+      &-1 {
+        height: 6vw;
+        transform: translate(-2.5vw, 1vw);
+        @media only screen and (max-width: 60em) {
+          height: 19vw;
+        }
+      }
+      &-2 {
+        height: 4vw;
+        transform: translate(-0.5vw, 1vw);
+        @media only screen and (max-width: 60em) {
+          height: 15vw;
+        }
+      }
+      &-3 {
+        height: 7vw;
+        @media only screen and (max-width: 60em) {
+          height: 24vw;
+        }
+      }
+      &-4 {
+        height: 7.5vw;
+        transform: translate(-3vw, 1vw);
+        @media only screen and (max-width: 60em) {
+          height: 26vw;
+        }
+      }
+    }
+
+    & .title::after {
+      content: "";
+      display: block;
+      width: 35vw;
+      height: 1px;
+      background-color: rgb(228, 186, 186);
+      transform: translateY(1.2vw);
+      opacity: 36%;
+
+      @media only screen and (max-width: 60em) {
+        transform: translateY(3.6vw);
+        height: 2px;
+        width: 77vw;
+      }
+    }
+    & .goods::after {
+      content: "";
+      display: block;
+      width: 35vw;
+      height: 1px;
+      background-color: rgb(228, 186, 186);
+      transform: translateY(1.2vw);
+      opacity: 36%;
+
+      @media only screen and (max-width: 60em) {
+        transform: translateY(3.6vw);
+        height: 2px;
+        width: 77vw;
+      }
+    }
+    & .intro::after {
+      content: "";
+      display: block;
+      width: 35vw;
+      height: 1px;
+      background-color: rgb(228, 186, 186);
+      transform: translateY(-2.6vw);
+      opacity: 36%;
+
+      @media only screen and (max-width: 60em) {
+        transform: translateY(-5vw);
+        height: 2px;
+        width: 77vw;
+      }
+    }
+  }
+}
+
+.numberLists {
+  width: 42.5vw;
+  height: 42.5vw;
+  top: 56%;
+  left: 98%;
+  transform: translate(-50%, -50%);
+
+  @media only screen and (max-width: 60em) {
+    top: 12%;
+    left: 20%;
+    width: 77vw;
+    height: 77vw;
+  }
+}
+.numberList {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  animation: numberList 1s ease-out 2s 1 backwards;
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.iconS {
+  width: 1.5vw;
+  height: 1.5vw;
+  overflow: hidden;
+  top: 15vh;
+  left: 50%;
+  transform: translate(-50%, 0);
+  cursor: pointer;
+
+  @media only screen and (max-width: 60em) {
+    position: fixed;
+    top: 11%;
+    width: 5vw;
+    height: 5vw;
+  }
+  @media only screen and (max-width: 32em) {
+    position: fixed;
+    top: 14%;
+  }
+  @media only screen and (max-width: 22em) {
+    position: fixed;
+    top: 15%;
+  }
+  @media only screen and (max-width: 20em) {
+    position: fixed;
+    top: 10%;
+  }
+  &:hover {
+    opacity: 0.4;
+  }
+}
+.iconSSvg {
+  width: 90%;
+  height: 90%;
+  animation: autoMoveUp 4s infinite cubic-bezier(0.77, 0, 0.28, 1);
+}
+.iconText {
+  width: 20vw;
+  height: 0.9vw;
+  top: 19vh;
+  left: 50%;
+  transform: translate(-50%, 0);
+  overflow: hidden;
+
+  @media only screen and (max-width: 60em) {
+    position: fixed;
+    top: 18%;
+    width: 60vw;
+    height: 2.7vw;
+  }
+  @media only screen and (max-width: 20em) {
+    position: fixed;
+    top: 12%;
+  }
+}
+.iconTextSvg {
+  height: 100%;
+  transition: opacity 0.7s;
+
+  &:hover {
+    opacity: 0.4;
+  }
+}

@@ -1,0 +1,158 @@
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.middle-position {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hidden {
+  display: none;
+}
+.hidden-2 {
+  display: none;
+}
+
+.no-visib {
+  visibility: hidden;
+}
+
+.opacity {
+  opacity: 0;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.radius-s {
+  border-radius: 5%;
+}
+.radius-m {
+  border-radius: 10%;
+}
+.radius-xxl {
+  border-radius: 50%;
+}
+
+.dark-l {
+  filter: brightness(0.55);
+}
+
+.z-s {
+  z-index: -1;
+}
+.z-m {
+  z-index: 10;
+}
+.z-l {
+  z-index: 99;
+}
+.z-xl {
+  z-index: 999;
+}
+.z-xxl {
+  z-index: 9999;
+}
+
+.defaultFake {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.pageMoveOut {
+  clip-path: inset(0 0 0 100%);
+}
+.pageMoveIn {
+  clip-path: inset(0 0 0 0);
+}
+
+.flex-left-align {
+  align-items: flex-start;
+}
+
+.img-left-move {
+  left: 86%;
+}
+
+.container-3-text-active {
+  background-position: 100%;
+  transform: translateY(2px);
+  box-shadow: 0.2rem 0.2rem 1rem rgba(189, 64, 64, 0.79);
+
+  & p {
+    color: white;
+  }
+}
+
+.container-5-theater-content-scale {
+  transform: scale(0.7);
+}
+
+.scale-s {
+  transform: scale(1.2);
+}
+.blur-s {
+  filter: blur(2.5px);
+}
+
+.translateY100 {
+  transform: translateY(100%);
+}
+
+.colorEgg-2-img-right-moveOut {
+  clip-path: ellipse(0 0 at 0 100%);
+}
+.colorEgg-2-img-left-moveOut {
+  clip-path: ellipse(0 0 at 100% 0);
+}
+.colorEgg-2-img-right-moveIn {
+  clip-path: ellipse(150% 150% at 100% 0);
+}
+.colorEgg-2-img-left-moveIn {
+  clip-path: ellipse(150% 150% at 0 100%);
+}
+
+.colorEgg-2-img-transitionDelay {
+  transition-delay: 0.6s;
+}
+
+.animation-play-state {
+  animation-play-state: running;
+}
+.animation-direction {
+  animation-direction: reverse;
+}
+
+.container-4-main-recommend-tag-active {
+  .container-4-main-recommend-tag {
+    &-line-1 {
+      opacity: 0.6;
+    }
+    &-line-2 {
+      clip-path: inset(0 0 0 0);
+    }
+    &-p {
+      opacity: 1;
+      transform: translateY(-0.6rem);
+    }
+  }
+}

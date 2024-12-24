@@ -1,0 +1,472 @@
+.container-2 {
+  &-bgDecoration {
+    z-index: 2;
+    &-1 {
+      top: 14%;
+      left: 8%;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 20%;
+        left: -20%;
+
+        background: white;
+        width: 1.6rem;
+        height: 1.6rem;
+        clip-path: polygon(0 0, 100% 0, 50% 50%, 50% 50%);
+      }
+
+      & p {
+        color: white;
+        font-family: "orbitron";
+        font-size: 1.2rem;
+      }
+    }
+    &-2 {
+      bottom: 64vh;
+      left: 8%;
+      opacity: 0.8;
+
+      & p {
+        color: white;
+        font-family: "orbitron";
+        font-size: 16rem;
+      }
+    }
+    &-3 {
+    }
+  }
+
+  &-background {
+    &-top {
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 34vh;
+      z-index: 1;
+      transition: clip-path 0.6s ease;
+
+      &-1 {
+        background: rgb(220, 111, 111);
+        clip-path: inset(0 0 0 0);
+      }
+      &-2 {
+        background-color: var(--color-pink-1);
+        filter: brightness(0.6);
+        clip-path: inset(0 100% 0 0);
+      }
+      &-3 {
+        box-shadow: 0px 10px 16px 0px rgba(87, 83, 83, 0.614);
+        transition: opacity 0.6s ease;
+      }
+    }
+
+    &-total {
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      background: url(IMG/container-2/bg-1.jpg);
+      background-size: cover;
+      filter: brightness(0.8);
+      z-index: 0;
+    }
+
+    &-bottomDecoration {
+      z-index: 2;
+      top: 97%;
+      left: 0;
+      width: 100vw;
+      height: 3vh;
+      background-color: black;
+      // background-image: url(/UPLOAD/IMG/配信/games/IMG_0520.JPG);
+      background-size: cover;
+
+      &::after {
+        display: block;
+        position: relative;
+        content: "";
+        top: calc(100% - 3px);
+        left: 0;
+        width: 50vw;
+        height: 3px;
+
+        background-color: #ff00f0;
+      }
+    }
+    &-colorLine {
+      z-index: 2;
+      top: calc(100vh - 3px);
+      left: 0;
+      width: 100vw;
+      height: 3px;
+
+      &::before {
+        display: block;
+        position: relative;
+        content: "";
+        top: 0;
+        left: 50%;
+        width: 20vw;
+        height: 3px;
+        background-color: #ffff21;
+      }
+      &::after {
+        display: block;
+        position: relative;
+        content: "";
+        top: 0;
+        left: 70%;
+        width: 30vw;
+        height: 3px;
+        background-color: #00ffa2;
+      }
+    }
+  }
+
+  &-x {
+    top: 20%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.6s;
+    z-index: 2;
+    & svg {
+      width: 4vh;
+      height: 4vh;
+    }
+  }
+
+  &-arr {
+    top: 84%;
+    transform: translate(0, -50%);
+    // align-items: flex-end;
+    @media only screen and (max-width: 77em) {
+      top: 88%;
+    }
+    @media only screen and (max-width: 72em) {
+      top: 90%;
+    }
+    @media only screen and (max-width: 50em) {
+      top: 53%;
+      z-index: 2;
+    }
+
+    & svg {
+      width: 4.5vw;
+      height: 5vw;
+      cursor: pointer;
+      @media only screen and (max-width: 50em) {
+        width: 7vh;
+        height: 8vh;
+      }
+    }
+    &-left {
+      left: 10%;
+      @media only screen and (max-width: 77em) {
+        left: 2%;
+      }
+    }
+    &-right {
+      right: 4vw;
+      @media only screen and (max-width: 86em) {
+        right: 0.4rem;
+      }
+      @media only screen and (max-width: 77em) {
+        right: 88%;
+      }
+      @media only screen and (max-width: 72em) {
+        right: 16px;
+      }
+    }
+  }
+
+  &-clothes {
+    top: 90%;
+    left: 30%;
+    z-index: 2;
+
+    pointer-events: none;
+    @media only screen and (max-width: 77em) {
+      left: 32vw;
+    }
+    @media only screen and (max-width: 72em) {
+      left: 30vw;
+    }
+    @media only screen and (max-width: 50em) {
+      left: 48vw;
+      top: 70%;
+      z-index: 1;
+    }
+  }
+
+  &-cloth {
+    & img {
+      width: 104vh;
+      transition: all 0.6s ease-in-out;
+
+      @media only screen and (max-width: 72em) {
+        width: 70.2vw;
+      }
+      @media only screen and (max-width: 50em) {
+        width: 80vh;
+      }
+    }
+  }
+
+  &-textBox {
+    top: 20%;
+    left: 46vw;
+    z-index: 2;
+
+    & p {
+      color: white;
+    }
+
+    gap: 2.2vw;
+    @media only screen and (max-width: 72em) {
+      gap: 4rem;
+    }
+    @media only screen and (max-width: 50em) {
+      width: 100vw;
+      height: 38vh;
+      left: 0;
+      top: 59%;
+      background-color: white;
+      z-index: 3;
+      gap: 2.4rem;
+      padding-left: 6vw;
+      padding-top: 6vh;
+    }
+
+    &-name {
+      width: 30vh;
+      height: 6vh;
+
+      & p {
+        font-size: 4.8vh;
+        font-weight: 600;
+      }
+    }
+
+    &-logoButton {
+      top: 31vh;
+      left: 46vw;
+      & button {
+        height: 3vh;
+        background-color: white;
+        color: var(--color-pink-2);
+        padding: 0 4px;
+        font-weight: 700;
+        font-size: 1.4rem;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 600%;
+          height: 4px;
+          top: calc(100% - 4px);
+          left: 0;
+          background-color: inherit;
+        }
+
+        @media only screen and (max-width: 72em) {
+          color: white;
+          height: 2.6vh;
+          font-size: 1.2rem;
+        }
+      }
+      @media only screen and (max-width: 72em) {
+        top: 63vh;
+        left: 6vw;
+      }
+    }
+
+    &-intro {
+      margin-top: 4.4vw;
+      gap: 0.4rem;
+      @media only screen and (max-width: 72em) {
+        gap: 0.8rem;
+        margin-top: 8rem;
+      }
+      @media only screen and (max-width: 72em) {
+        gap: 0.8rem;
+        margin-top: 0;
+      }
+      & p {
+        font-size: 1.6rem;
+        font-weight: 600;
+      }
+    }
+
+    &-detail {
+      gap: 0.8rem;
+      @media only screen and (max-width: 72em) {
+        gap: 1.2rem;
+      }
+      @media only screen and (max-width: 72em) {
+        gap: 0.6rem;
+      }
+      & p {
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &-switchsBox {
+    bottom: 0rem;
+    left: 54vw;
+    width: 66vh;
+    height: 60vh;
+    z-index: 2;
+
+    overflow: hidden;
+
+    @media only screen and (max-width: 77em) {
+      left: 52vw;
+    }
+    @media only screen and (max-width: 72em) {
+      left: 48vw;
+      width: 44.55vw;
+      height: 40.5vw;
+    }
+    @media only screen and (max-width: 50em) {
+      left: 0;
+      background-color: white;
+      z-index: 2;
+      width: 100vw;
+      height: 38vh;
+      bottom: 3vh;
+      overflow: auto;
+    }
+
+    &-number {
+      top: 4%;
+      left: 90%;
+      transform: translate(-50%, -50%);
+      @media only screen and (max-width: 72em) {
+        display: none;
+      }
+      & img {
+        width: 11vh;
+      }
+    }
+  }
+  &-switchs {
+    gap: 2vh;
+
+    @media only screen and (max-width: 50em) {
+      position: absolute;
+      left: 0;
+      margin-left: 2vh;
+    }
+  }
+  &-switch {
+    width: 20vh;
+    height: 49vh;
+    overflow: hidden;
+    position: relative;
+
+    background-color: var(--color-grey-2);
+    &:hover p {
+      color: black;
+    }
+
+    @media only screen and (max-width: 72em) {
+      width: 13.5vw;
+      height: 33.075vw;
+    }
+    @media only screen and (max-width: 50em) {
+      width: 14vh;
+      height: 34.3vh;
+    }
+
+    &-text {
+      top: 76%;
+      left: 4px;
+      gap: 1vh;
+      width: 100%;
+
+      @media only screen and (max-width: 72em) {
+        top: 74%;
+      }
+      &-1 {
+        font-family: Orbitron;
+        font-size: 6vh;
+
+        @media only screen and (max-width: 72em) {
+          font-size: 4.05vw;
+        }
+      }
+      &-2 {
+        font-size: 1.6vh;
+        font-weight: 700;
+
+        @media only screen and (max-width: 72em) {
+          font-size: 1.08vw;
+        }
+      }
+      &-3 {
+        font-size: 2vh;
+        font-weight: 700;
+
+        @media only screen and (max-width: 72em) {
+          font-size: 1.35vw;
+        }
+      }
+      &-4 {
+        font-size: 2vh;
+        font-weight: 700;
+
+        @media only screen and (max-width: 72em) {
+          font-size: 1.35vw;
+        }
+      }
+
+      & p {
+        color: white;
+        transform: translateY(-5px);
+      }
+    }
+
+    &-img {
+      top: 134%;
+
+      transition: left 0.6s;
+      & img {
+        width: 90vh;
+
+        @media only screen and (max-width: 72em) {
+          width: 60.75vw;
+        }
+      }
+    }
+    &:hover .container-2-switch-img {
+      left: 50%;
+    }
+    & .filter {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      background-color: transparent;
+    }
+    &:hover .filter {
+      background-color: rgba(243, 21, 21, 0.404);
+    }
+
+    &-filter {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(54, 52, 52, 0.842);
+    }
+    &:hover .container-2-switch-filter {
+      background-color: transparent;
+    }
+  }
+}
