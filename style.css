@@ -1548,7 +1548,7 @@ img {
   font-weight: 600;
 }
 .colorEgg-4-main-musicPause {
-  display:flex;
+  display:grid;
   gap: 4rem;
   justify-self: left;
   opacity: 0.6;
