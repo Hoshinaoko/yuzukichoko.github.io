@@ -30,7 +30,7 @@ let analyser;
 let dataArray;
 
 // 画布初始状态
-audioCanvasCtx.fillStyle = "red";
+audioCanvasCtx.fillStyle = "rgb(174, 59, 59)";
 for (let i = 0; i < 256; i += 2) {
   audioCanvasCtx.fillRect(i * 2, audioCanvas.height / 2 - 1, 2, 2);
   audioCanvasCtx.fillRect(i * 2, audioCanvas.height / 2, 2, 2);
@@ -310,7 +310,6 @@ const audioChange = function () {
   audioPause(audioIconPauseFour, audioFour);
   audioPause(audioIconPauseFive, audioFive);
 };
-
 audioChange();
 
 ////监听音频播放状态--1

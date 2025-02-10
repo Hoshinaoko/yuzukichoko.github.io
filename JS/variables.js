@@ -6,7 +6,23 @@ const startBg = document.querySelector(".startBg");
 const startBgMusic = document.querySelector(".startBgMusic");
 const startBgClose = document.querySelector(".startBg-close");
 
+// startAnima
+const startAnima = document.querySelector(".startAnima");
+const startAnimaBg1 = document.querySelector(".startAnima-bg-1");
+const startAnimaBg2 = document.querySelector(".startAnima-bg-2");
+const startAnimaBg3 = document.querySelector(".startAnima-bg-3");
+const startAnimaBg4 = document.querySelector(".startAnima-bg-4");
+const startAnimaBgBg = document.querySelectorAll(".startAnima-bg-bg");
+const startAnimaTextBoxText1 = document.querySelector(
+  ".startAnima-textBox-text-1"
+);
+const startAnimaTextBoxText2 = document.querySelector(
+  ".startAnima-textBox-text-2"
+);
+
 const imgAll = document.querySelectorAll("img");
+const audioAll = document.querySelectorAll("audio");
+const videoAll = document.querySelectorAll("video");
 
 const body = document.querySelector("body");
 const container = document.querySelectorAll(".container");
@@ -92,6 +108,8 @@ const navTextFour = document.querySelectorAll(".navText-4");
 const navTextFive = document.querySelectorAll(".navText-5");
 const navTextSix = document.querySelectorAll(".navText-6");
 const guideLineOne = document.querySelector(".guide-line-1");
+const guideLine2 = document.querySelector(".guide-line-2");
+const guideLine3 = document.querySelector(".guide-line-3");
 
 const guideIconMenuLine = document.querySelector(".guide-icon-menu-line");
 
@@ -129,10 +147,15 @@ const guideMobileNavBoxNav6 = document.querySelector(
   ".guide-mobile-navBox-nav-6"
 );
 
+// container zero
 const containerZeroImg = document.querySelectorAll(".container-0-img");
 const containerZeroTextBox = document.querySelector(".container-0-textBox");
+const container0Video = document.querySelector(".container-0-video");
 
 //container one
+const container1AudioButtons = document.querySelector(
+  ".container-1-audioButtons"
+);
 const containerOneAudioButtonAudio = document.querySelectorAll(
   ".container-1-audioButton-audio"
 );
@@ -219,6 +242,12 @@ const container2BackgroundTop3 = document.querySelector(
 const container2BackgroundTotal = document.querySelector(
   ".container-2-background-total"
 );
+const container2BgDecoration1 = document.querySelector(
+  ".container-2-bgDecoration-1"
+);
+const container2BgDecoration2 = document.querySelector(
+  ".container-2-bgDecoration-2"
+);
 
 const containerTwoSwitchs = document.querySelector(".container-2-switchs");
 const containerTwoSwitch = document.querySelectorAll(".container-2-switch");
@@ -229,6 +258,10 @@ const containerTwoSwitchFour = document.querySelector(".container-2-switch-4");
 const containerTwoSwitchFive = document.querySelector(".container-2-switch-5");
 const containerTwoSwitchSix = document.querySelector(".container-2-switch-6");
 const containerTwoSwitchSeven = document.querySelector(".container-2-switch-7");
+const containerTwoSwitchEight = document.querySelector(".container-2-switch-8");
+const containerTwoSwitchNine = document.querySelector(".container-2-switch-9");
+const containerTwoSwitchTen = document.querySelector(".container-2-switch-10");
+const containerTwoClothes = document.querySelector(".container-2-clothes");
 const containerTwoCloth = document.querySelectorAll(".container-2-cloth");
 const containerTwoClothOne = document.querySelector(".container-2-cloth-1");
 const containerTwoClothTwo = document.querySelector(".container-2-cloth-2");
@@ -237,6 +270,9 @@ const containerTwoClothFour = document.querySelector(".container-2-cloth-4");
 const containerTwoClothFive = document.querySelector(".container-2-cloth-5");
 const containerTwoClothSix = document.querySelector(".container-2-cloth-6");
 const containerTwoClothSeven = document.querySelector(".container-2-cloth-7");
+const containerTwoClothEight = document.querySelector(".container-2-cloth-8");
+const containerTwoClothNine = document.querySelector(".container-2-cloth-9");
+const containerTwoClothTen = document.querySelector(".container-2-cloth-10");
 const containerTwoClothImg = document.querySelectorAll(
   ".container-2-cloth-img"
 );
@@ -261,6 +297,15 @@ const containerTwoClothImgSix = document.querySelector(
 const containerTwoClothImgSeven = document.querySelector(
   ".container-2-cloth-img-7"
 );
+const containerTwoClothImgEight = document.querySelector(
+  ".container-2-cloth-img-8"
+);
+const containerTwoClothImgNine = document.querySelector(
+  ".container-2-cloth-img-9"
+);
+const containerTwoClothImgTen = document.querySelector(
+  ".container-2-cloth-img-10"
+);
 const containerTwoTextBox = document.querySelectorAll(".container-2-textBox");
 const containerTwoTextBoxOne = document.querySelector(".container-2-textBox-1");
 const containerTwoTextBoxTwo = document.querySelector(".container-2-textBox-2");
@@ -277,11 +322,21 @@ const containerTwoTextBoxSix = document.querySelector(".container-2-textBox-6");
 const containerTwoTextBoxSeven = document.querySelector(
   ".container-2-textBox-7"
 );
+const containerTwoTextBoxEight = document.querySelector(
+  ".container-2-textBox-8"
+);
+const containerTwoTextBoxNine = document.querySelector(
+  ".container-2-textBox-9"
+);
+const containerTwoTextBoxTen = document.querySelector(
+  ".container-2-textBox-10"
+);
 const containerTwoArrLeft = document.querySelector(".container-2-arr-left");
 const containerTwoArrRight = document.querySelector(".container-2-arr-right");
 const containerTwoSwitchsOne = document.querySelector(".container-2-switchs-1");
 const containerTwoSwitchsTwo = document.querySelector(".container-2-switchs-2");
 
+const filter = document.querySelectorAll(".filter");
 const containerTwoSwitchsFilter = document.querySelectorAll(
   ".container-2-switch-filter"
 );
@@ -305,6 +360,15 @@ const containerTwoSwitchsFilterSix = document.querySelector(
 );
 const containerTwoSwitchsFilterSeven = document.querySelector(
   ".container-2-switch-filter-7"
+);
+const containerTwoSwitchsFilterEight = document.querySelector(
+  ".container-2-switch-filter-8"
+);
+const containerTwoSwitchsFilterNine = document.querySelector(
+  ".container-2-switch-filter-9"
+);
+const containerTwoSwitchsFilterTen = document.querySelector(
+  ".container-2-switch-filter-10"
 );
 const containerTwoSwitchImg = document.querySelectorAll(
   ".container-2-switch-img"
@@ -330,6 +394,15 @@ const containerTwoSwitchImgSix = document.querySelector(
 const containerTwoSwitchImgSeven = document.querySelector(
   ".container-2-switch-img-7"
 );
+const containerTwoSwitchImgEight = document.querySelector(
+  ".container-2-switch-img-8"
+);
+const containerTwoSwitchImgNine = document.querySelector(
+  ".container-2-switch-img-9"
+);
+const containerTwoSwitchImgTen = document.querySelector(
+  ".container-2-switch-img-10"
+);
 const containerTwoSwitchsBox = document.querySelector(
   ".container-2-switchsBox"
 );
@@ -351,7 +424,15 @@ const containerTwoSwitchTextThree = document.querySelectorAll(
 const containerTwoSwitchTextFour = document.querySelectorAll(
   ".container-2-switch-text-4"
 );
+const container2SwitchsBoxNumber = document.querySelector(
+  ".container-2-switchsBox-number"
+);
+const container2SwitchsBoxNumber1 = document.querySelector(
+  ".container-2-switchsBox-number-1"
+);
 const containerTwoX = document.querySelector(".container-2-x");
+
+// container-3
 const containerThreeText = document.querySelectorAll(".container-3-text");
 const containerThreeImgs = document.querySelector(".container-3-imgs");
 const containerThreeImg = document.querySelectorAll(".container-3-img");
@@ -646,9 +727,11 @@ const containerThreeDetailButtonBgTwo = document.querySelectorAll(
   ".container-3-detail-button-bg-2"
 );
 
+// container 4
 const containerFourBackground = document.querySelector(
   ".container-4-background"
 );
+const containerFourMain = document.querySelector(".container-4-main");
 const containerFourMainLive = document.querySelector(".container-4-main-live");
 const containerFourMainRecommend = document.querySelector(
   ".container-4-main-recommend"
@@ -694,6 +777,23 @@ const container4MainRecommendTag7 = document.querySelector(
   ".container-4-main-recommend-tag-7"
 );
 
+const container4mainRecommendVideosSwitchButtonLeft = document.querySelector(
+  ".container-4-main-recommend-videos-switchButton-left"
+);
+const container4mainRecommendVideosSwitchButtonRight = document.querySelector(
+  ".container-4-main-recommend-videos-switchButton-right"
+);
+const container4MainRecommendVideoBox = document.querySelector(
+  ".container-4-main-recommend-videoBox"
+);
+
+const container4MainIntroBoxTextBox3More = document.querySelector(
+  ".container-4-main-introBox-textBox-3-more"
+);
+const container4Details = document.querySelector(".container-4-details");
+const container4Detail4 = document.querySelector(".container-4-detail-4");
+
+// container-5
 const containerFiveClose = document.querySelectorAll(".container-5-close");
 
 const containerFiveBox = document.querySelectorAll(".container-5-box");
@@ -994,6 +1094,45 @@ const footer = document.querySelector(".footer");
 /////////////
 //colorEgg
 const colorEggRunButton = document.querySelector(".colorEgg-runButton");
+
+//colorEgg-1
+const colorEgg1 = document.querySelector(".colorEgg-1");
+const colorEgg1AudioButtonAudio = document.querySelectorAll(
+  ".colorEgg-1-audioButton-audio"
+);
+const colorEgg1AudioButton = document.querySelectorAll(
+  ".colorEgg-1-audioButton"
+);
+const colorEgg1AudioButtonImgText = document.querySelectorAll(
+  ".colorEgg-1-audioButton-img-text"
+);
+const colorEgg1AudioButtonImgTextOne = document.querySelector(
+  ".colorEgg-1-audioButton-img-text-1"
+);
+const colorEgg1AudioButtonImgTextTwo = document.querySelector(
+  ".colorEgg-1-audioButton-img-text-2"
+);
+const colorEgg1AudioButtonImgTextThree = document.querySelector(
+  ".colorEgg-1-audioButton-img-text-3"
+);
+const colorEgg1AudioButtonOne = document.querySelector(
+  ".colorEgg-1-audioButton-1"
+);
+const colorEgg1AudioButtonTwo = document.querySelector(
+  ".colorEgg-1-audioButton-2"
+);
+const colorEgg1AudioButtonThree = document.querySelector(
+  ".colorEgg-1-audioButton-3"
+);
+const colorEgg1AudioButtonAudioOne = document.querySelector(
+  ".colorEgg-1-audioButton-audio-1"
+);
+const colorEgg1AudioButtonAudioTwo = document.querySelector(
+  ".colorEgg-1-audioButton-audio-2"
+);
+const colorEgg1AudioButtonAudioThree = document.querySelector(
+  ".colorEgg-1-audioButton-audio-3"
+);
 //colorEgg-2
 const colorEgg2 = document.querySelector(".colorEgg-2");
 
@@ -1043,15 +1182,83 @@ const colorEgg2ContainerImgBoxImg13 = document.querySelector(
 const colorEgg2ArrLeft = document.querySelector(".colorEgg-2-arr-left");
 const colorEgg2ArrRight = document.querySelector(".colorEgg-2-arr-right");
 
+const colorEgg2Close = document.querySelector(".colorEgg-2-close");
+
+// colorEgg-3
+const joji = document.querySelectorAll(".joji");
+const colorEgg3 = document.querySelectorAll(".colorEgg-3");
+const colorEgg3Text = document.querySelectorAll(".colorEgg-3-text");
+// const colorEgg31 = document.querySelectorAll(".colorEgg-3-1");
+// const colorEgg32 = document.querySelectorAll(".colorEgg-3-2");
+
 // colorEgg-4
 const colorEgg4 = document.querySelector(".colorEgg-4");
+const colorEgg4Bg2 = document.querySelector(".colorEgg-4-bg-2");
 const colorEgg4Close = document.querySelector(".colorEgg-4-close");
+
 const colorEgg4MainImgBox = document.querySelector(".colorEgg-4-main-imgBox");
+const colorEgg4MainImgBoxImg = document.querySelector(
+  ".colorEgg-4-main-imgBox-img"
+);
 const colorEgg4MainMusicPlay = document.querySelector(
   ".colorEgg-4-main-musicPlay"
 );
+const colorEgg4MainMusicPause = document.querySelector(
+  ".colorEgg-4-main-musicPause"
+);
+const colorEgg4MainMusicPauseButton = document.querySelector(
+  ".colorEgg-4-main-musicPause-button"
+);
+const colorEgg4PromptButton = document.querySelector(
+  ".colorEgg-4-prompt-button"
+);
+const colorEgg4MainImgBoxScrollBar = document.querySelector(
+  ".colorEgg-4-main-imgBox-scrollBar"
+);
+const colorEgg4MainImgBoxScrollBarPoint = document.querySelector(
+  ".colorEgg-4-main-imgBox-scrollBar-point"
+);
+const colorEgg4MainImgBoxScrollBarLine = document.querySelectorAll(
+  ".colorEgg-4-main-imgBox-scrollBar-line"
+);
+const colorEgg4MainImgBoxScrollBarLine1 = document.querySelector(
+  ".colorEgg-4-main-imgBox-scrollBar-line-1"
+);
+const colorEgg4MainImgBoxScrollBarLine2 = document.querySelector(
+  ".colorEgg-4-main-imgBox-scrollBar-line-2"
+);
+const colorEgg4MainImgBoxScrollBarLine1Img = document.querySelector(
+  ".colorEgg-4-main-imgBox-scrollBar-line-1-img"
+);
+const colorEgg4MainImgBoxScrollBarLine2Img = document.querySelector(
+  ".colorEgg-4-main-imgBox-scrollBar-line-2-img"
+);
+const colorEgg4MainImgBoxScrollBarLineImg = document.querySelectorAll(
+  ".colorEgg-4-main-imgBox-scrollBar-line-img"
+);
+
+const colorEgg4MainTexts = document.querySelector(".colorEgg-4-main-texts");
+const colorEgg4MainLrcs = document.querySelector(".colorEgg-4-main-lrcs");
+const colorEgg4MainLrcsLrcBox = document.querySelector(
+  ".colorEgg-4-main-lrcs-lrcBox"
+);
+const colorEgg4MainLrcsLrcBoxLrc = document.querySelector(
+  ".colorEgg-4-main-lrcs-lrcBox-lrc"
+);
+
+const colorEgg4Prompt = document.querySelector(".colorEgg-4-prompt");
+
 //colorEgg-5
 const colorEgg5 = document.querySelector(".colorEgg-5");
 //colorEgg-6
 const colorEgg6 = document.querySelector(".colorEgg-6");
 const colorEgg6Close = document.querySelector(".colorEgg-6-close");
+const colorEgg6TextBoxText = document.querySelectorAll(
+  ".colorEgg-6-textBox-text"
+);
+const colorEgg6TextBoxTextFrom = document.querySelector(
+  ".colorEgg-6-textBox-text-from"
+);
+const colorEgg6Uichoko = document.querySelector(".colorEgg-6-uichoko");
+
+const colorEgg6UichokoImg = document.querySelector(".colorEgg-6-uichoko-img");

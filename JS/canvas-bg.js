@@ -119,7 +119,7 @@ function animationOne() {
   window.requestAnimationFrame(animationOne);
 }
 
-// animationOne();
+animationOne();
 //
 let canvas3 = document.createElement("canvas"),
   ctx3 = canvas3.getContext("2d");

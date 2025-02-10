@@ -1,4 +1,4 @@
-const ban = function () {
+const code = `const ban = function () {
   //屏蔽f12
   document.onkeydown = function () {
     if (window.event && window.event.keyCode == 123) {
@@ -10,7 +10,7 @@ const ban = function () {
       window.event.keyCode = 505;
     }
     if (window.event && window.event.keyCode == 8) {
-      alert(str + "\n请使用Del键进行字符的删除操作！");
+      alert(str + "请使用Del键进行字符的删除操作！");
       window.event.returnValue = false;
     }
   };
@@ -116,3 +116,38 @@ const ban = function () {
   };
 };
 ban();
+`;
+
+const options = {
+  // 代码压缩
+  compact: true,
+
+  // 变量名混淆
+  // identifierNamesGenerator: "mangled",
+
+  // 代码自我保护
+  selfDefending: true,
+
+  // 控制流平坦化
+  controlFlowFlattening: true,
+  controlFlowFlatteningThreshold: 0.05,
+
+  // 僵尸代码
+  // deadCodeInjection: true,
+  // deadCodeInjectionThreshold: 0.1,
+
+  // 变量替换
+  // transformObjectKeys: true,
+
+  // 禁用控制台输出
+  disableConsoleOutput: true,
+
+  // 调试保护
+  debugProtection: true,
+};
+
+const obfuscator = require("javascript-obfuscator");
+function obfuscate(code, options) {
+  return obfuscator.obfuscate(code, options).getObfuscatedCode();
+}
+console.log(obfuscate(code, options));
