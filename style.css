@@ -1553,7 +1553,7 @@ img {
   opacity: 0.6;
   height: 4rem;
   transform: translateY(200%);
-  animation: colorEgg-6-text 1秒 ease 1s 1 backwards;
+  animation: colorEgg-6-text 1s ease 1s 1 backwards;
 }
 .colorEgg-4-main-musicPause-button {
   width: 4rem;
