@@ -5666,7 +5666,6 @@ img {
 .container-4-main-decorations {
   width: 82vw;
   justify-content: space-between;
-  margin-top: -1.6rem;
 }
 @media only screen and (max-width: 62em) {
   .container-4-main-decorations {
