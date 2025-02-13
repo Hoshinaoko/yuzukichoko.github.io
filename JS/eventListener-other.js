@@ -1168,23 +1168,50 @@ const navRed = function () {
 };
 
 const containerFiveTotal = function () {
-  containerFiveBox.forEach((e) => {
-    e.addEventListener("click", () => {
+  if(window.innerWidth >960){
+    containerFiveBox.forEach((e) => {
+      e.addEventListener("click", () => {
+        guideLineOne.style.opacity = `0`;
+        guideLineOne.style.top = `120%`;
+        guideLine2.style.opacity = `0`;
+        guideLine2.style.top = `-20%`;
+        guideLine3.style.opacity = `0`;
+        guideLine3.style.left = `120%`;
+  
+        guideNumber.classList.add("hidden");
+  
+        if (!colorEgg4Prompt.classList.contains("scale-zero")) {
+          colorEgg4Prompt.classList.add("scale-zero");
+          colorEgg4MusicPause();
+        }
+      });
+    });
+  }else{
+    containerFiveBoxOne.addEventListener("click",()=>{
       guideLineOne.style.opacity = `0`;
       guideLineOne.style.top = `120%`;
       guideLine2.style.opacity = `0`;
       guideLine2.style.top = `-20%`;
       guideLine3.style.opacity = `0`;
       guideLine3.style.left = `120%`;
-
-      guideNumber.classList.add("hidden");
-
-      if (!colorEgg4Prompt.classList.contains("scale-zero")) {
-        colorEgg4Prompt.classList.add("scale-zero");
-        colorEgg4MusicPause();
-      }
-    });
-  });
+      
+    })
+    containerFiveBoxTwo.addEventListener("click",()=>{
+      guideLineOne.style.opacity = `0`;
+      guideLineOne.style.top = `120%`;
+      guideLine2.style.opacity = `0`;
+      guideLine2.style.top = `-20%`;
+      guideLine3.style.opacity = `0`;
+      guideLine3.style.left = `120%`;
+      
+    })
+    containerFiveBoxThree.addEventListener("click",()=>{
+      return alert("no enough screen width");
+      
+    })
+   
+  }
+ 
   containerFiveCloses.forEach((e) => {
     e.addEventListener("click", () => {
       guideLineOne.style.opacity = `1`;
@@ -1469,7 +1496,7 @@ const containerFivePhotosClose = function () {
     navWhite();
   });
   containerFiveBoxThree.addEventListener("click", () => {
-    if (window.innerWidth > 700) {
+    if (window.innerWidth > 960) {
       // scrollGuide.classList.add("hidden");
       containerFivePhotos.classList.remove("hidden");
       containerFiveTheater.classList.remove("closed");
@@ -1478,6 +1505,7 @@ const containerFivePhotosClose = function () {
       containerFivePhotos.classList.add("working");
       navRed();
     } else {
+ 
       return alert("no enough screen width");
     }
   });
@@ -1673,6 +1701,7 @@ const containerFiveTheaterClose = function () {
       containerFiveTheater.classList.add("working");
       navBlack();
     } else {
+     
       return alert("no enough screen width");
     }
   });
